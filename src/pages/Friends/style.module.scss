@@ -1,0 +1,80 @@
+@import "@/styles/varribles";
+
+.main {
+  text-align: center;
+
+  .img {
+    width: 93px;
+  }
+  .title {
+    font-size: 36px;
+    margin-top: 10px;
+  }
+
+  .subtitle {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+
+    h4 {
+      color: $gray-color;
+      font-size: 16px;
+    }
+
+    img {
+      width: 25px;
+    }
+  }
+
+  .users {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    list-style-type: none;
+    max-height: 55dvh;
+    overflow-y: auto;
+    padding: 5px 3px;
+
+    .user {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      background: $list-color;
+      border: 1px solid $list-border-color;
+      border-radius: 10px;
+      transform: skew(-3deg);
+      font-size: 24px;
+
+      .user_text {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .user_avatar {
+          margin-left: 3px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .invite {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-bottom: 100px;
+
+    .invite_copy {
+      background-color: $list-color;
+      padding: 18px;
+      border-radius: 10px;
+      border: 1px solid $list-border-color;
+    }
+  }
+}

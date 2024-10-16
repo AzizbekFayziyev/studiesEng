@@ -1,0 +1,58 @@
+@import "@/styles/varribles";
+
+.toast {
+  position: fixed;
+  right: 20px;
+  top: 50px;
+  border-radius: 5px;
+  padding: 4px;
+  max-width: 200px;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+
+  &.success {
+    border: 1px solid $success-color;
+    background-color: #031f12;
+  }
+
+  &.error {
+    border: 1px solid $error-color;
+    background-color: #281616;
+  }
+
+  &.default {
+    border: 1px solid $gray-color;
+    background-color: $list-active-color;
+  }
+
+  .text {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    .title {
+      font-size: 13px;
+
+      &.large {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .info {
+    margin-top: 12px;
+    font-size: 12px;
+  }
+
+  button {
+    padding: 5px 8px;
+    border-radius: 5px;
+    background-color: $list-border-color;
+  }
+}

@@ -1,0 +1,74 @@
+@import "@/styles/varribles";
+
+.list {
+  color: $white-color;
+  text-decoration: none;
+  background-color: $list-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-radius: 20px;
+  border: 1px solid $list-border-color;
+
+  .completed_icon{
+    width: 31px !important; 
+    margin-left: 2px; 
+  }
+
+  &.completed{
+    border: none;
+    background-color: $success-color;
+  }
+
+  &.active {
+    border: none;
+    background-color: $list-active-color;
+    position: relative;
+
+    &::before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 20px;
+      background: linear-gradient(
+        228.64deg,
+        #4e5264 5.49%,
+        #abaebd 37.42%,
+        #323443 67.23%,
+        #6e7282 81.28%,
+        #282a36 90.65%
+      );
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+    }
+  }
+
+  &.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .list_arrow {
+    width: auto;
+  }
+
+  .list_text {
+    h4 {
+      font-size: 30px;
+    }
+
+    h5 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      color: $gray-color;
+      margin-top: 3px;
+    }
+  }
+}

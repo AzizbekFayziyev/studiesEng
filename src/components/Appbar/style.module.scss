@@ -1,0 +1,104 @@
+@import "@/styles/varribles";
+
+.appbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+}
+
+.appbar__balance {
+  padding: 8px 25px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.appbar__balance span {
+  color: $secondary-color;
+}
+
+.appbar__balance svg {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: -50%;
+}
+
+.appbar__energy {
+  padding-left: 15px !important;
+  background-color: #000000;
+  padding: 5px;
+  padding-top: 0;
+  width: 130px;
+}
+
+.appbar__energy_content {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.appbar__energy_content h3 {
+  color: $white-color;
+}
+
+.appbar__energy_content h3 span {
+  color: $gray-color;
+}
+
+.appbar_energy_progress {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 95px;
+  height: 7.5px;
+  padding: 0 1px;
+  border-radius: 20px;
+  background-color: #3f3f3f;
+}
+
+.appbar_energy_progress {
+  .status {
+    height: 6px;
+    width: 96%;
+    background-color: #dc994f;
+    border-radius: 20px;
+  }
+}
+
+.appbar_energy_progress {
+  .lines {
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 1px;
+    left: 1px;
+    height: 6px;
+    width: 98%;
+    border-radius: 20px;
+  }
+}
+
+.appbar_energy_progress {
+  .lines {
+    div {
+      background: linear-gradient(to top, #ffffff, #dddddd);
+      opacity: 0.1;
+      width: 2px;
+      height: 200%;
+      transform: rotate(50deg);
+    }
+  }
+}

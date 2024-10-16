@@ -1,0 +1,43 @@
+@import "@/styles/varribles";
+
+.statistic {
+    h5 {
+      color: $gray-color;
+      margin-bottom: 8px;
+    }
+
+    .info {
+      display: flex;
+      margin: auto;
+      gap: 30px;
+      max-width: max-content;
+      border-radius: 12px;
+      background: linear-gradient(
+        90deg,
+        rgba(131, 109, 201, 0.3) 0%,
+        rgba(201, 109, 142, 0.3) 100%
+      );
+      padding: 10px 14px;
+      transform: skew(-3deg);
+
+      p {
+        font-size: 14px;
+      }
+
+      span {
+        font-size: 24px;
+      }
+
+      .info_true {
+        span {
+          color: #836dc9;
+        }
+      }
+
+      .info_false{
+        span{
+            color: #C96D8E;
+        }
+      }
+    }
+  }

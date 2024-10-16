@@ -1,0 +1,27 @@
+@import "@/styles/varribles";
+
+.main{
+    text-align: center;
+
+
+    .infoText{
+        color: #F2BC35;
+        font-size: 24px;
+        margin-top: 8px;
+        margin-bottom: 28px;
+    }
+
+    .title{
+        font-size: 36px;
+    }
+
+    .subtitle{
+        color: $gray-color;
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    button{
+        margin-top: 40px;
+    }
+}

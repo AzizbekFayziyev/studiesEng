@@ -1,0 +1,102 @@
+@import "@/styles/varribles";
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 110px);
+  background-size: cover;
+  z-index: -2;
+  left: 0;
+  top: -110px;
+}
+
+.main {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 25px;
+
+  .subtitle {
+    color: $gray-color;
+    font-size: 20px;
+  }
+
+  .day {
+    font-size: 28px;
+    line-height: 150%;
+
+    span {
+      font-size: 34px;
+      color: $purple-color;
+      text-shadow: 1px 1px 10px $purple-color;
+    }
+  }
+
+  .btn {
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 250px;
+    border-radius: 20px;
+    padding: 13px 15px;
+    background-color: #6f3543;
+    position: relative;
+
+    .btn_border {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      border-radius: 20px;
+      z-index: -1;
+      background: $gradient-gold;
+    }
+  }
+
+  .btn_disabled {
+    background: $black-color;
+    color: $white-color;
+    display: grid;
+    place-content: center;
+    font-size: 48px;
+
+    .btn_border {
+      background: linear-gradient(
+        228.64deg,
+        #4e5264 5.49%,
+        #abaebd 37.42%,
+        #323443 67.23%,
+        #6e7282 81.28%,
+        #282a36 90.65%
+      );
+    }
+  }
+
+  .btn_text {
+    font-size: 30px;
+    color: $white-color;
+
+    .btn_count {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      span {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+.next {
+  position: absolute;
+  bottom: 10%;
+  right: 15px;
+}

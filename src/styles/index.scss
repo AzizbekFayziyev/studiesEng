@@ -1,0 +1,70 @@
+@import "varribles";
+
+// Global styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Karton2";
+  src: url("./font/Karton.woff") format("woff"),
+    url("./font/Karton.ttf") format("ttf"),
+    url("./font/Karton.otf") format("otf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+html,body{
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $black-color;
+  font-family: "Karton2", sans-serif;
+  color: $white-color;
+}
+
+button {
+  font-family: "Karton2", sans-serif !important;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.container {
+  position: relative;
+  padding: 0 15px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 40px;
+}
+
+.marginB {
+  margin-bottom: 20px;
+}
+
+.marginT {
+  margin-top: 80px;
+}
+
+a {
+  &.active {
+    color: var(--white);
+    background-color: $bottom-bar-active-color;
+  }
+}
+
+#loadingScreen {
+  transition: .3s all ease;
+
+  &.hide{
+    opacity: 0%;
+    z-index: -999;
+    pointer-events: none;
+  }
+}

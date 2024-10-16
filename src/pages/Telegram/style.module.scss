@@ -1,0 +1,61 @@
+@import "@/styles/varribles";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 40px;
+
+  .title {
+    margin-top: 40px;
+  }
+
+  .tgBtn{
+    margin-top: 8px;
+    max-width: 260px;
+    width: 100%;
+    color: $white-color;
+    background-color: #007BFC;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 24px;
+
+    img{
+        margin-left: 10px;
+    }
+  }
+
+  .coin{
+    position: relative;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 80px;
+    color: $secondary-color;
+
+    &::before{
+        content: "";
+        z-index: -1;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+       background: $gold-color;
+       filter: blur(50px);
+    }
+  }
+}
+
+
+.background {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -180px;
+    z-index: -1;
+  }

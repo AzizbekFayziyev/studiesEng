@@ -1,0 +1,57 @@
+@import "@/styles/varribles";
+
+.bottom__nav {
+  z-index: 99;
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 30px);
+  background-color: $bottom-bar-color;
+  padding: 5px;
+  border-radius: 20px;
+
+  .close {
+    cursor: pointer;
+    position: absolute;
+    top: -18px;
+    right: -5px;
+    background: #2f3037b2;
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+    padding: 6px 10px;
+  }
+}
+
+.bottom__nav_link {
+  font-size: 13px;
+  max-width: 62px;
+  color: $gray-color;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 6px 16px;
+  transition: 0.3s all ease;
+
+  
+
+  &:hover {
+    background-color: $bottom-bar-active-color;
+  }
+}
+
+.menu {
+  background: none;
+  position: fixed;
+  z-index: 999;
+  right: 10px;
+  bottom: 10px;
+}
+

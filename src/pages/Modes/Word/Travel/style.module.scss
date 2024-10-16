@@ -1,0 +1,143 @@
+@import "@/styles/varribles";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: center;
+
+  .question {
+    position: relative;
+    padding: 32px;
+    border-radius: 20px;
+    background: $gold-black-color;
+
+    h3 {
+      font-size: 24px;
+
+      span {
+        font-size: 38px;
+      }
+    }
+
+    .coin {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: $gold-color;
+      font-size: 24px;
+    }
+
+    &::before {
+      content: "";
+      z-index: -1;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 20px;
+      background: $gradient-gold;
+    }
+  }
+
+  .lists {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .list {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-radius: 20px;
+      border: 1px solid $list-border-color;
+      background-color: $list-color;
+
+      .info {
+        cursor: pointer;
+        position: absolute;
+        right: 8px;
+        top: -10px;
+
+        &:hover {
+          div {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        div {
+          transition: .3s ease;
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          font-size: 13px;
+          top: -60px;
+          left: -135px;
+          width: 178px;
+          background-color: $blue-color;
+          padding: 10px;
+          border-radius: 10px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            right: 20px;
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 10px solid $blue-color;
+          }
+        }
+      }
+
+      &.true {
+        background-color: $success-color;
+      }
+
+      &.false {
+        background-color: $error-color !important;
+      }
+
+      &.small {
+        h4 {
+          font-size: 18px;
+          padding-top: 12px;
+        }
+      }
+
+      h4 {
+        padding-top: 4px;
+        font-size: 24px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 220px;
+      }
+
+      span {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        z-index: 2;
+        color: $gray-color;
+        font-size: 12px;
+        height: 40px;
+      }
+    }
+  }
+
+  .next {
+    margin-left: auto;
+    margin-top: 5px;
+  }
+}
