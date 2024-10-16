@@ -25,7 +25,7 @@ const Friends = () => {
         </div>
 
         <ul className={style.users}>
-          {usersData.slice(0, 3).map((user, id) => (
+          {usersData.map((user, id) => (
             <li key={id} className={style.user}>
               <div className={style.user_text}>
                 <span>{id + 1}</span>
