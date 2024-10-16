@@ -9,7 +9,6 @@ import Toast from "../../components/Toast";
 const Friends = () => {
   const [toastOpen, setToastOpen] = useState(false);
 
-  const onCopy = () => {};
   return (
     <>
       <Appbar />
