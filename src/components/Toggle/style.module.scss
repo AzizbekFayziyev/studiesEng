@@ -1,0 +1,15 @@
+.toggle {
+  outline: none;
+  width: 56px;
+  border-radius: 10px;
+  background-color: #4b4b4b80;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  &.active {
+    justify-content: end;
+    background-color: #b0d1ec;
+  }
+}

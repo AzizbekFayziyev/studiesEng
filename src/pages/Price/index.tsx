@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import Appbar from "../../components/Appbar";
 import Button from "../../components/Button";
 import style from "./style.module.scss";
+import InfoModal from "../../components/InfoModal";
+import { useState } from "react";
 
 const cards = [
   {
@@ -36,6 +39,22 @@ const cards = [
 ];
 
 const Price = () => {
+  const premiumStatus = localStorage.getItem("Pstatus");
+  const navigate = useNavigate();
+  const [modal, setModal] = useState(false);
+
+  const onReplay = () => {
+    if (premiumStatus !== "active") {
+      toggleModal();
+    } else {
+      navigate(-1);
+    }
+  };
+
+  const toggleModal = () => {
+    setModal((prev) => !prev);
+  };
+
   return (
     <>
       <Appbar />
@@ -96,11 +115,33 @@ const Price = () => {
             <img width={52} src="/icons/star.svg" alt="star" />
           </div>
 
-          <p>15<span>/100</span></p>
+          <p>
+            15<span>/100</span>
+          </p>
         </div>
 
-        <Button noImg>попробовать еще</Button>
+        <Button onClick={onReplay} noImg>
+          попробовать еще
+        </Button>
       </main>
+
+      <InfoModal open={modal} onClose={toggleModal}>
+        <div className={style.premium_required}>
+          <p>
+            для повторного <br /> прохождения <br />
+            вам необходима
+          </p>
+
+          <div className={style.premium}>
+            <img width={22} src="/icons/corona.svg" alt="premium" /> премиум
+            подписка
+          </div>
+
+          <Button onClick={() => navigate("/premium")} isGolden>
+            активировать
+          </Button>
+        </div>
+      </InfoModal>
     </>
   );
 };

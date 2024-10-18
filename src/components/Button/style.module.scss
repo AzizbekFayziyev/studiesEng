@@ -10,9 +10,17 @@
   border-radius: 10px;
   font-size: 24px;
 
-  &.small{
+  &.small {
     padding: 12px 16px;
     font-size: 20px;
+  }
+
+  &.golden {
+    background-color: $gold-50-color;
+
+    &::before {
+      background: $gradient-gold;
+    }
   }
 
   &::before {
@@ -40,7 +48,7 @@
     margin-top: 6px;
   }
 
-  .arrowLeft{
+  .arrowLeft {
     transform: rotate(180deg);
     float: left;
     margin-top: 6px;

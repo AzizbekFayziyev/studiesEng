@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Appbar from "../../../components/Appbar";
 import BottomBar from "../../../components/Bottombar";
 import style from "./style.module.scss";
+import Badge from "../../../components/Badge";
 
 const WordRuEn = () => {
   const navigate = useNavigate();
@@ -22,25 +23,13 @@ const WordRuEn = () => {
               </div>
 
               <div className={style.list_badges}>
-                <div className={style.premium}>
-                  <img width={11} src="/icons/corona.svg" alt="premium" />{" "}
-                  премиум
-                </div>
+                <Badge type="premium" />
 
-                <div className={style.rate}>
-                  <div className={style.stars}>
-                    <img width={15} src="/icons/star2.svg" alt="star" />
-                    <img width={15} src="/icons/star.svg" alt="star" />
-                    <img width={15} src="/icons/star.svg" alt="star" />
-                  </div>
-
-                  <div className={style.score}>
-                    <img src="/icons/question.svg" width={14} alt="question" />
-                    <p>
-                      15/<span>100</span>
-                    </p>
-                  </div>
-                </div>
+                <Badge
+                  type="rate"
+                  stars={["star2", "star", "star"]}
+                  rate={15}
+                />
               </div>
 
               <img className={style.arrow} src="/icons/arrow.svg" alt="arrow" />
@@ -59,16 +48,11 @@ const WordRuEn = () => {
               </div>
 
               <div className={style.list_badges}>
-                <div className={style.coins}>
-                  <img src="/icons/coin.svg" width={14} alt="coin" /> 15
-                </div>
+                <Badge type="coin" coin={15} />
 
-                <div className={style.task}>задание</div>
+                <Badge type="task" />
 
-                <div className={style.question}>
-                  <img src="/icons/question.svg" width={14} alt="question" />
-                  20
-                </div>
+                <Badge type="question" question={20} />
               </div>
 
               <img className={style.arrow} src="/icons/arrow.svg" alt="arrow" />
@@ -83,12 +67,9 @@ const WordRuEn = () => {
               </div>
 
               <div className={style.list_badges}>
-                <div className={style.free}>бесплатно</div>
-                <div className={style.task}>задание</div>
-                <div className={style.question}>
-                  <img src="/icons/question.svg" width={14} alt="question" />
-                  12
-                </div>
+                <Badge type="free" />
+                <Badge type="task" />
+                <Badge type="question" question={12} />
               </div>
 
               <img className={style.arrow} src="/icons/arrow.svg" alt="arrow" />
@@ -96,18 +77,18 @@ const WordRuEn = () => {
           </li>
 
           <li>
-            <Link className={`${style.list} ${style.disactive}`} to="/mode/word-ru-en/giroskop">
+            <Link
+              className={`${style.list} ${style.disactive}`}
+              to="/mode/word-ru-en/giroskop"
+            >
               <div className={style.list_text}>
                 <h4>гороскоп</h4>
                 <p>изучите новые слова по теме «гороскоп»</p>
               </div>
 
               <div className={style.list_badges}>
-                <div className={style.disabled}>недоступно</div>
-                <div className={style.question}>
-                  <img src="/icons/question.svg" width={14} alt="question" />
-                  32
-                </div>
+                <Badge type="disabled" />
+                <Badge type="question" question={32} />
               </div>
 
               <img className={style.arrow} src="/icons/arrow.svg" alt="arrow" />
@@ -122,12 +103,9 @@ const WordRuEn = () => {
               </div>
 
               <div className={style.list_badges}>
-                <div className={style.free}>бесплатно</div>
-                <div className={style.task}>задание</div>
-                <div className={style.question}>
-                  <img src="/icons/question.svg" width={14} alt="question" />
-                  44
-                </div>
+                <Badge type="free" />
+                <Badge type="task" />
+                <Badge type="question" question={44} />
               </div>
 
               <img className={style.arrow} src="/icons/arrow.svg" alt="arrow" />

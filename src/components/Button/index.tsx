@@ -7,6 +7,7 @@ interface ButtonProps {
   isReverse?: boolean;
   noImg?: boolean;
   isSmall?: boolean;
+  isGolden?: boolean;
 }
 
 const Button = ({
@@ -15,9 +16,10 @@ const Button = ({
   isReverse = false,
   noImg = false,
   isSmall = false,
+  isGolden = false,
 }: ButtonProps) => {
   return (
-    <button className={`${style.btn} ${isSmall && style.small}`} onClick={onClick}>
+    <button className={`${style.btn} ${isSmall && style.small} ${isGolden && style.golden}`} onClick={onClick}>
       {!noImg && isReverse && (
         <img className={style.arrowLeft} src="/icons/arrow.svg" alt="arrow" />
       )}

@@ -1,0 +1,57 @@
+@import "@/styles/varribles";
+
+.main {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  display: grid;
+  place-content: center;
+  background-color: #00000075;
+
+  .modal {
+    padding: 18px 10px;
+    position: relative;
+    background-color: $modal-color;
+    border-radius: 10px;
+    width: 311px;
+    min-height: 200px;
+
+    .close{
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: $card-color;
+    }
+
+    &::before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      border-radius: 10px;
+      background: linear-gradient(
+        210.3deg,
+        #a9a8a8 5.05%,
+        #dcdcdc 33.87%,
+        #393939 60.76%,
+        #d8d8d8 73.44%,
+        #393939 81.89%
+      );
+    }
+  }
+}
+
+@media (max-width: 320px) {
+    .main .modal{
+        width: 280px;
+    }
+}
